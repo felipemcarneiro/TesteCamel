@@ -21,7 +21,9 @@ App output is streamed into a console. Note that if your app expects user input,
 # comando pra guardar:
 
 mvn dependency:resolve
+
 mvn clean install -U
+
 mvn eclipse:eclipse
 
 mvn exec:java -e -D exec.mainClass="org.eclipse.che.examples.HelloWorld"
