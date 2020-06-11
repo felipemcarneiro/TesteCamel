@@ -27,3 +27,12 @@ mvn clean install -U
 mvn eclipse:eclipse
 
 mvn exec:java -e -D exec.mainClass="org.eclipse.che.examples.HelloWorld"
+
+# pra mandar
+git remote set-url origin https://github.com/felipemcarneiro/TesteCamel.git
+git commit -a -m 'Inicializacao'
+git push -u origin dev
+
+# pra receber
+git fetch
+git checkout dev
