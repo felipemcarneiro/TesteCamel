@@ -14,8 +14,8 @@ public class HelloWorldRouter extends RouteBuilder {
 	public void configure() throws Exception {
 
         
-        from("file://home/user/entrada?noop=true")
-		.to("file://home/usr/saida");
+        from("file://home//user//entrada?noop=true")
+		.to("file://home//user//saida");
         
         // implementation goes here
 		System.out.println("Hello World..File.");
