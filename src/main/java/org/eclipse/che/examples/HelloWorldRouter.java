@@ -13,8 +13,12 @@ public class HelloWorldRouter extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 
-		// implementation goes here
-		System.out.println("Hello World...");
+        
+        from("file://home/user/entrada?noop=true")
+		.to("file://home/usr/saida");
+        
+        // implementation goes here
+		System.out.println("Hello World..File.");
 	}
 	
 }
