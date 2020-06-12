@@ -27,9 +27,9 @@ public class HelloWorld {
             context.start();
 
             // stopping the camel context
-            context.stop();
+            //context.stop();
 
-            context.close();
+            //context.close();
 
         } catch (final Exception e) {
             e.printStackTrace();
