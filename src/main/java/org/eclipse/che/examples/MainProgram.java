@@ -4,13 +4,19 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.main.Main;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+import org.apache.log4j.Level;
 
 import java.util.Date;
 
 public class MainProgram {
 
     public static void main(String[] args) throws Exception {
-
+        
+        BasicConfigurator.configure();
+        Logger.getRootLogger().setLevel(Level.INFO);
+        
         MainProgram mainProgram = new MainProgram();
         mainProgram.starCamelRouter();
 
