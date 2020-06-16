@@ -22,7 +22,7 @@ public class MainProgram {
         //main.configure().addRoutesBuilder(new MyRouteBuilder());
         main.configure().addRoutesBuilder(new MyRouteBuilder2());
      
-        System.out.println("Starting Camel. Use ctrl + c to terminate the JVM.\n");
+        //System.out.println("Starting Camel. Use ctrl + c to terminate the JVM.\n");
         main.run();
     }
 
@@ -44,6 +44,7 @@ public class MainProgram {
             from("file:///home/user/inicio?noop=true")
             .to("file:///home/user/fim")
             .end()
+            System.out.println("File mooved at " + new Date());
             ;
         }
     }
