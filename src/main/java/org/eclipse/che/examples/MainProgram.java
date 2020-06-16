@@ -42,7 +42,9 @@ public class MainProgram {
         @Override
         public void configure() throws Exception {
             from("file:///home/user/inicio?noop=true")
+            .log("origem")
             .to("file:///home/user/fim")
+            .log("destino")
             .end();
             System.out.println("File mooved at " + new Date());
             ;
