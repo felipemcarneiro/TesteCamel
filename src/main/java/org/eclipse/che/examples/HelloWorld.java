@@ -26,6 +26,8 @@ public class HelloWorld {
             // starting the camel context
             context.start();
 
+            Thread.currentThread().join();
+
             // stopping the camel context
             //context.stop();
 
