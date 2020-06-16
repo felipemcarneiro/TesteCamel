@@ -43,7 +43,7 @@ public class MainProgram {
         public void configure() throws Exception {
             from("file:///home/user/inicio?noop=true")
             .to("file:///home/user/fim")
-            .end()
+            .end();
             System.out.println("File mooved at " + new Date());
             ;
         }
