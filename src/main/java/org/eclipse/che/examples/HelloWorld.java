@@ -29,9 +29,9 @@ public class HelloWorld {
             Thread.currentThread().join();
 
             // stopping the camel context
-            //context.stop();
+            context.stop();
 
-            //context.close();
+            context.close();
 
         } catch (final Exception e) {
             e.printStackTrace();

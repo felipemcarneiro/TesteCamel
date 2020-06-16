@@ -15,7 +15,9 @@ public class HelloWorldRouter extends RouteBuilder {
 
         
         from("file:///home/user/inicio?noop=true")
-		.to("file:///home/user/fim");
+        .to("file:///home/user/fim")
+        .end()
+        ;
         
         // implementation goes here
 		System.out.println("Hello World..File.");
