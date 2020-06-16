@@ -19,7 +19,8 @@ public class MainProgram {
     public void starCamelRouter() throws Exception {
         Main main = new Main();
 
-        main.configure().addRoutesBuilder(new MyRouteBuilder());
+        //main.configure().addRoutesBuilder(new MyRouteBuilder());
+        main.configure().addRoutesBuilder(new MyRouteBuilder2());
      
         System.out.println("Starting Camel. Use ctrl + c to terminate the JVM.\n");
         main.run();
@@ -34,6 +35,16 @@ public class MainProgram {
                             System.out.println("Invoked timer at " + new Date());
                         }
                     });
+        }
+    }
+
+       private static class MyRouteBuilder2 extends RouteBuilder {
+        @Override
+        public void configure() throws Exception {
+            from("file:///home/user/inicio?noop=true")
+            .to("file:///home/user/fim")
+            .end()
+            ;
         }
     }
 }
