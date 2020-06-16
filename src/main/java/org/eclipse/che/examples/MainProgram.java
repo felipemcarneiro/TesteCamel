@@ -28,7 +28,7 @@ public class MainProgram {
     private static class MyRouteBuilder extends RouteBuilder {
         @Override
         public void configure() throws Exception {
-            from("timer:foo?delay=5s")
+            from("timer://foo?fixedRate=true&period=6000")
                     .process(new Processor() {
                         public void process(Exchange exchange) throws Exception {
                             System.out.println("Invoked timer at " + new Date());
